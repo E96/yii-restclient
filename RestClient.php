@@ -13,6 +13,11 @@ class RestClient extends CApplicationComponent {
 	public $baseUrl;
 	public $timeout = 5;
 
+	/**
+	 * @var array дополнительные заголовки к каждому запросу (header=>value)
+	 */
+	public $extraHeaders = [ ];
+
 	public function __call($method, $args) {
 		if (in_array(strtoupper($method), [ 'GET', 'PUT', 'POST', 'DELETE' ])) {
 			$params = array_merge([ $method ], $args);
@@ -21,6 +26,8 @@ class RestClient extends CApplicationComponent {
 	}
 
 	private function send($requestType, $url, $data = null, $extraHeaders = [ ]) {
+
+		$extraHeaders = array_merge($this->extraHeaders, $extraHeaders);
 
 		$request = new CurlRequest($this->baseUrl . $url);
 		$request->timeout = $this->timeout;
