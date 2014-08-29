@@ -1,7 +1,6 @@
 {
     "name" : "e96/yii-restclient",
     "description" : "Rest client for E96 projects",
-    "version" : "dev-master",
     "license" : "MIT",
     "require": {
         "yiisoft/yii" : "~1.1",
