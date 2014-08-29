@@ -3,6 +3,11 @@
     "description" : "Rest client for E96 projects",
     "version" : "1.0.0-dev",
     "license" : "MIT",
+    "require": {
+        "yiisoft/yii" : "~1.1",
+        "alex-salt/yii-curl" : "1.0.0-dev",
+        "php" : ">=5.4.0"
+    },
     "autoload": {
         "classmap": [ "src/" ]
     }
