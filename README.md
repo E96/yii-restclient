@@ -1,5 +1,5 @@
 # Установка
-# Composer
+## Composer
 ```json
 {
     "require" : {
@@ -17,10 +17,11 @@
     ]
 }
 ```
-# config
+## App config
 
-```
-[
+```php
+<?php
+return [
     'components' => [
         'restSorcery' => [
             'class' => 'RestClient',
