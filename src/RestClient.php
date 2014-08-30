@@ -29,7 +29,7 @@ class RestClient extends CApplicationComponent {
 
 		$extraHeaders = array_merge($this->extraHeaders, $extraHeaders);
 
-		$request = new CurlRequest($this->baseUrl . $url);
+		$request = new \Curl\Request($this->baseUrl . $url);
 		$request->timeout = $this->timeout;
 		$request->headers = $extraHeaders;
 		$request->requestType = strtoupper($requestType);
