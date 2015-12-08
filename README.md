@@ -12,7 +12,7 @@
         },
         {
             "type" : "vcs",
-            "url" : "git@bitbucket.org:e96shop/yii-restclient.git"
+            "url" : "git@github.com:E96/yii-restclient.git"
         }
     ]
 }
@@ -25,7 +25,7 @@ return [
     'components' => [
         'restSorcery' => [
             'class' => 'RestClient',
-            'baseUrl' => 'http://api.master.beta96.ru',
+            'baseUrl' => '<api_url>',
         ],
     ]
 ]
